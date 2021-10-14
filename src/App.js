@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Board } from './Board';
+import React,{useState} from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  const [pickedX, setPickedX] = useState(new Array());
+  const [pickedO, setPickedO] = useState(new Array());
+
+
+
+  return(
+    <Board pickedX={pickedX} pickedO={pickedO} setPickedX={setPickedX} setPickedO={setPickedO} />
   );
 }
+
+/*
+
+*/ 
 
 export default App;
